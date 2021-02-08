@@ -1,22 +1,23 @@
 const { gql } = require('apollo-server-express')
 
-const typeDefs = gql`
+const typeDefs = gql `
 
-type Persona{
+type Propietario{
     id: Int!
     nombre: String!
     apellido: String!
+    email: String!
     active: Boolean!
 }
 
 type Query{
-    getPersonas: [Persona],
-    getPersona(id: Int!): Persona
+    getPropietarios: [Propietario],
+    getPropietario(id: Int!): Propietario
 }
 
 
 type Mutation{
-    createPersona(nombre: String!, apellido: String!, active: Boolean!): Persona!
+    createPropietario(nombre: String!, apellido: String!, email: String!, active: Boolean!): Propietario!
 }
 `
 module.exports = typeDefs

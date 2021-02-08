@@ -2,17 +2,17 @@ const resolvers = {
 
     Query: {
 
-        async getPersonas(root, args, { models }){
-            return await models.persona.findAll()
+        async getPropietarios(root, args, { models }) {
+            return await models.propietario.findAll()
         },
-        async getPersona(root, args, { models }){
-            return await models.persona.findByPk(args.id)
+        async getPropietario(root, args, { models }) {
+            return await models.propietario.findByPk(args.id)
         }
 
     },
     Mutation: {
-        async createPersona(root, { nombre, apellido, active }, { models }){
-            return await models.persona.create( {nombre, apellido, active} )
+        async createPropietario(root, { nombre, apellido, email, active }, { models }) {
+            return await models.propietario.create({ nombre, apellido, email, active })
         }
     }
 

@@ -8,7 +8,7 @@ const sequelize = new Sequelize('plurdomo', 'root', '12345678', { //Modifica los
 })
 
 const models = {
-    persona: sequelize.import('./persona')
+    propietario: sequelize.import('./propietario')
 }
 
 models.sequelize = sequelize

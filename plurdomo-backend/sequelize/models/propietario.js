@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Persona = sequelize.define('Persona', {
+    const Propietario = sequelize.define('Propietario', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -13,10 +13,14 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         active: {
             type: DataTypes.BOOLEAN,
             allowNull: false
         }
     }, {});
-    return Persona
+    return Propietario
 }
